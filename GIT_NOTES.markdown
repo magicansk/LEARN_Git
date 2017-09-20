@@ -94,7 +94,7 @@
 
 
 5-2 
-### **CONNECTING OVER SSH** ###
+#### **CONNECTING OVER SSH** ####
 >* ***When you set up SSH, you'll generate an SSH key and add it to the ssh-agent and then add the key to your GitHub account. Adding the SSH key to the ssh-agent ensures that your SSH key has an extra layer of security through the use of a passphrase.***
 >
 >* ***NOTICE!  SAML single sign-on (SSO) cannot be accessed with SSH. To access repositories in organizations that use SAML SSO, use an authorized personal access token with HTTPS.*** 
