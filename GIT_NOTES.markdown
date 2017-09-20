@@ -54,16 +54,16 @@
 * ***If you clone with https, you can cache your github password in git using a credential helper***  
      * **Turn on credential helper git will save your password in memory cache 15 min default.**
        ```
-       git config --global credential.helper cache //SET GIT TO USE THE CREDENTIAL MEMORY CAHCE
-       git config --global credential.helper 'cache --timeout=3600' //CHANGE THE DEFAULT PASSWORD CACHE TIMEOUT (AFTER 1 HOUR IN SECONDS)
-       git config --global credential.helper //FOR CONFIRM
+       git config --global credential.helper cache #SET GIT TO USE THE CREDENTIAL MEMORY CAHCE
+       git config --global credential.helper 'cache --timeout=3600' #CHANGE THE DEFAULT PASSWORD CACHE TIMEOUT (AFTER 1 HOUR IN SECONDS)
+       git config --global credential.helper #FOR CONFIRM
        ```
 * ***The https clone URLs are available on all repositories, public and private. These URLs work everywhere even if you are behind a firewall or proxy. In certain cases, if you'd rather use SSH, you might be able to use SSH over the HTTPS port.***  
      *  **FOR SSH OVER THE HTTPS PORT**  
        ***firewalls refuse to allow SSH connections entirely, you can attempt to clone using an SSH     connection made over the HTTPS port. Most firewall rules should allow this, but proxy servers may interfere***  
  
        * **TO test if SSH over HTTPS port is possible, run**  
-         `ssh -T //(disable pseudo-terminal allocation) -p 443 git@ssh.github.com`  
+         `ssh -T #disable pseudo-terminal allocation -p 443 git@ssh.github.com`  
   
        * **ABOVE YOU SHOULD BE SEE**  
        `Hi username! You've successfully authenticated, but GitHub does not provide shell access` 
@@ -80,13 +80,12 @@
        
        * **TEST CONNECTION TO GITHUB**
    ```
-   ssh -T git@github.com //IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES
+   ssh -T git@github.com #IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES
    ```
 
 * ***When you git clone, git fetch, git pull, or git push to a remote repository using HTTPS URLs on the command line, you'll be asked for your GitHub username and password.***
 
 * ***If you have enabled two-factor authentication, or if you are accessing an organization that uses SAML single sign-on, you must provide a personal access token instead of entering your password for HTTPS Git.***
-
 
      * ***[FOR TWO-FACTOR AUTHENTICATION](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa)***
      * ***[FOR SAML SINGLE SIGN-ON](https://help.github.com/articles/about-authentication-with-saml-single-sign-on)***
@@ -120,9 +119,9 @@
 * #### **GENERATING A NEW SSH KEY** #### 
   * **OPEN TERMINAL**
   *  ```
-     ssh-keygen -t rsa -b 4096 -C "your_email@example.com" //WITH YOU GITHUB EMAIL
+     ssh-keygen -t rsa -b 4096 -C "your_email@example.com" #WITH YOU GITHUB EMAIL
      -t (Specifies the type of key to create)
-     -b (The desired length of the primes may be specified) //SEE MORE IN man page ssh-keygen(1)
+     -b (The desired length of the primes may be specified) #SEE MORE IN man page ssh-keygen(1)
      -C (Provide for a comment)
      ```  
      **This creates a new ssh key, using the provided email as a label. It will show above:**   
@@ -147,4 +146,41 @@
    [Eval command](https://www.tutorialspoint.com/unix_commands/eval.htm) comes in handy when you have a unix or linux command stored in a variable and you want to execute that command stored in the string. The eval command first evaluates the argument and then runs the command stored in the argument.
    * **Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.**  
    `ssh-add ~/.ssh/id_rsa`  
-   * **[Adding a new SSH key to your Github Account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**
+   * **[Adding a new SSH key to your Github Account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**  
+* #### **TESTING SSH CONNECTION** ####  
+>* **Before testing your SSH connection, you should have:**
+>    1. **[Checked for existing SSH keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)**
+>    2. **[Generated a new SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**
+>    3. **[Added a new SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**  
+>    
+   * ***When you test your connection, you'll need to authenticate this action using your password, which is the SSH key passphrase you created earlier.***
+     
+   * ```
+     ssh -T git@github.com #Attempts to ssh to github 
+     # -T for  Disable pseudo-terminal allocation.
+     ```   
+     * ***YOU MAY SEE THESE WARNING***
+     ```
+   The authenticity of host 'github.com (192.30.252.1)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+
+The authenticity of host 'github.com (192.30.252.1)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)?
+     ```
+   * ***Note: The example above lists the GitHub IP address as 192.30.252.1. When pinging GitHub, you may see a range of [IP addresses](https://help.github.com/articles/github-s-ip-addresses/)***  
+   * **Verify that the fingerprint in the message you see matches one of the messages in step 2, then type yes**
+   ```
+   Hi username! You've successfully authenticated, but GitHub does not
+provide shell access.
+   ```  
+      * **ERROR MESSAGES** 
+      ``` Agent admitted failure to sign using the key.
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+      ```  
+          * **["Error: Agent admitted failure to sign" for certain Linux Distribution](https://help.github.com/articles/error-agent-admitted-failure-to-sign/)**
+          * **["Error: Permission denied (publickey)" resulting contain your username](https://help.github.com/articles/error-permission-denied-publickey/)**
+      
+      
