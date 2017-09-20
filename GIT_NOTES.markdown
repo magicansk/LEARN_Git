@@ -27,58 +27,62 @@
 ### **SETTING COMMIT EMAIL ADDRESS IN GIT** ###
 //***GitHub uses the email address set in your local Git configuration to associate commits pushed from the command line with your GitHub account.***
 //***SAME AS SETTING USERNAME ABOVE THERE ARE EVERY AND SINGLE REPOSITORY***
-```
-git config --global user.email "example@example.com"
-git config --global user.email //***FOR CONFIRM***
-```
+
+`git config --global user.email "example@example.com"`
+
+//***FOR CONFIRM***
+`git config --global user.email` 
+
 
 //***FOR SINGLE REPOSITORY***
 //***You can change the email address associated with commits you make in a single repository. This will override your global Git config settings in this one repository, but will not affect any other repositories.***
-```
-git config user.email "example@example.com"
-git config user.email //***FOR CONFIRM***
-```
+`git config user.email "example@example.com"`
+
+//***FOR CONFIRM***
+`git config  user.email` 
+
 
 5.
 ### **AUTHENTICATION WITH GITHUB FROM GIT** ###
 //***WHEN YOU CONNECT TO A GITHUB REPOSITORY FROM GIT, YOU'LL NEED TO AUTHENTICATE WITH GITHUB USING EITHER HTTPS OR SSH.***
 
-5-1 #### **CONNECTING OVER HTTPS (RECOMMENDED)** ####
-- //***IF YOU CLONE WITH HTTPS, YOU CAN CACHE YOUR GITHUB PASSWORD IN GIT USING A CREDENTIAL HELPER***
-    - //**TURN ON CREDENTIAL HELPER GIT WILL SAVE YOUR PASSWORD IN MEMORY CACHE 15 MIN DEFAULT. **
+5-1. 
+#### **CONNECTING OVER HTTPS (RECOMMENDED)** ####
+* //***IF YOU CLONE WITH HTTPS, YOU CAN CACHE YOUR GITHUB PASSWORD IN GIT USING A CREDENTIAL HELPER***
+    * //**TURN ON CREDENTIAL HELPER GIT WILL SAVE YOUR PASSWORD IN MEMORY CACHE 15 MIN DEFAULT. **
        ```
-       git config --global credential.helper cache //***SET GIT TO USE THE CREDENTIAL MEMORY CAHCE***
-       git config -global credential.helper 'cache --timeout=3600' //***CHANGE THE DEFAULT PASSWORD CACHE TIMEOUT (AFTER 1 HOUR IN SECONDS)***
+       git config --global credential.helper cache //SET GIT TO USE THE CREDENTIAL MEMORY CAHCE
+       git config -global credential.helper 'cache --timeout=3600' //CHANGE THE DEFAULT PASSWORD CACHE TIMEOUT (AFTER 1 HOUR IN SECONDS)
        ```
-- //***The https:// clone URLs are available on all repositories, public and private. These URLs work everywhere--even if you are behind a firewall or proxy. In certain cases, if you'd rather use SSH, you might be able to use SSH over the HTTPS port.***
-       - // **FOR SSH OVER THE HTTPS PORT**
+* //***The https:// clone URLs are available on all repositories, public and private. These URLs work everywhere--even if you are behind a firewall or proxy. In certain cases, if you'd rather use SSH, you might be able to use SSH over the HTTPS port.***
+        * //** FOR SSH OVER THE HTTPS PORT**
        ***(firewalls refuse to allow SSH connections entirely, you can attempt to clone using an SSH     connection made over the HTTPS port. Most firewall rules should allow this, but proxy servers may interfere)***
  
-       - //** TO test if SSH over HTTPS port is possible, run** 
-         `ssh -T ***(disable pseudo-terminal allocation)*** -p 443 git@ssh.github.com`
+       * //** TO test if SSH over HTTPS port is possible, run** 
+         `ssh -T //(disable pseudo-terminal allocation) -p 443 git@ssh.github.com`
   
-       - //**ABOVE YOU SHOULD BE SEE**
+       * //**ABOVE YOU SHOULD BE SEE**
        `Hi username! You've successfully authenticated, but GitHub does not provide shell access` 
-       - // ***IF NOT SEE [Trobleshoot](https://help.github.com/articles/error-permission-denied-publickey/#platform-linux)***
+       * // ***IF NOT SEE [Trobleshoot](https://help.github.com/articles/error-permission-denied-publickey/#platform-linux)***
    
-       - //**ENABLING SSH CONNECTIONS OVER HTTPS **
-       - //***IF YOU ABLE SSH INTO GIT@SSH.GITHUB.COM OVER PORT 443, OVERRIDE YOUR SSH SETTING TO FORCE ANY CONNECTION TO GITHUB THROUGH THE SERVER AND PORT***
-       -  //**SET SSH CONFIG EDIT FILE  ~/.ssh/config **
+       * //**ENABLING SSH CONNECTIONS OVER HTTPS **
+       * //***IF YOU ABLE SSH INTO GIT@SSH.GITHUB.COM OVER PORT 443, OVERRIDE YOUR SSH SETTING TO FORCE ANY CONNECTION TO GITHUB THROUGH THE SERVER AND PORT***
+       *  //**SET SSH CONFIG EDIT FILE  ~/.ssh/config **
        ```   
               Host github.com
               Hostname ssh.github.com
               Port 443 
        ```
-       - // **TEST CONNECTION TO GITHUB**
+       * // **TEST CONNECTION TO GITHUB**
    ```
-   ssh -T git@github.com //***IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES***
+   ssh -T git@github.com //IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES
 ```
-- // ***When you git clone, git fetch, git pull, or git push to a remote repository using HTTPS URLs on the command line, you'll be asked for your GitHub username and password.***
+* // ***When you git clone, git fetch, git pull, or git push to a remote repository using HTTPS URLs on the command line, you'll be asked for your GitHub username and password.***
 
-- //***If you have enabled two-factor authentication, or if you are accessing an organization that uses SAML single sign-on, you must provide a personal access token instead of entering your password for HTTPS Git.***
-     - ***[FOR TWO-FACTOR AUTHENTICATION](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa)***
-     - ***[FOR SAML SINGLE SIGN-ON](https://help.github.com/articles/about-authentication-with-saml-single-sign-on)***
-     - ***[FOR PROVIDE A PERSONAL ACCESS TOKEN](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)***
+* //***If you have enabled two-factor authentication, or if you are accessing an organization that uses SAML single sign-on, you must provide a personal access token instead of entering your password for HTTPS Git.***
+     * ***[FOR TWO-FACTOR AUTHENTICATION](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa)***
+     * ***[FOR SAML SINGLE SIGN-ON](https://help.github.com/articles/about-authentication-with-saml-single-sign-on)***
+     * ***[FOR PROVIDE A PERSONAL ACCESS TOKEN](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)***
 
 5-2 
 ### **CONNECTING OVER SSH** ###
