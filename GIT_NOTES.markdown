@@ -251,5 +251,5 @@ PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033
 ```  
 
 
-###References###
+### References ###
 [github](https://help.github.com/articles/set-up-git/)
