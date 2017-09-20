@@ -102,6 +102,21 @@
 >* ***IF TOU CLONE OVER SSH, YOU MUST GENERATE SSH KEYS ON EACH COMPUTER YOU USE TO PUSH OR PULL FROM GITHUB***
 >
 >* ***If you clone GitHub repositories using SSH, then you authenticate using SSH keys instead of a username and password*** 
+
+>1. **[ABOUT SSH](https://help.github.com/articles/about-ssh/)**
+>     * **SSH protocol, connect and authenticate to remote servers & service.**
+>     * **SSH keys, connect to Github without supplying your username or password at each visit.**
+>2. **[CHECKING FOR EXISITING SSH KEYS](https://help.github.com/articles/checking-for-existing-ssh-keys/)**
+>      * **If you don't have an existing public and private key pair, or don't wish to use any that are available to connect to GitHub, then see below generate a new SSH key.**
+>      * **If you see an existing public and private key pair listed (for example id_rsa.pub and id_rsa) that you would like to use to connect to GitHub, you can add your SSH key to the ssh-agent.**
+>3. **GENERATING A NEW SSH KEY AND ADDING IT TO THE SSH-AGENT**
+>      * **After checking for exisiting SSH keys, you can generate a new SSH key to use for authentication then add it ti the ssh-agent.**
+>4. **[ADDING A NEW SSH KEY TO YOUR GITHUB ACCOUNT](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**
+>      * **To configure your GitHub account to use your new (or existing) SSH key, you'll also need to add it to your GitHub account.**
+>5. **TESTING YOUR SSH CONNECTION**
+>      * **After set up your SSH key and added it to your GitHub account, you can test your connection.**
+>6. **[WORKING WITH SSH KEY PASSPHRASES](https://help.github.com/articles/working-with-ssh-key-passphrases/)**
+>      * **You can secure your SSH keys and configure an authentication agent so that you won't have to reenter your passphrase every time you use your SSH keys.**
 * #### **GENERATING A NEW SSH KEY** #### 
   * **OPEN TERMINAL**
   *  ```
@@ -132,4 +147,4 @@
    [Eval command](https://www.tutorialspoint.com/unix_commands/eval.htm) comes in handy when you have a unix or linux command stored in a variable and you want to execute that command stored in the string. The eval command first evaluates the argument and then runs the command stored in the argument.
    * **Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.**  
    `ssh-add ~/.ssh/id_rsa`  
-   * **[Adding a new SSH keyto your Github Account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**
+   * **[Adding a new SSH key to your Github Account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**
