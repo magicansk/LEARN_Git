@@ -80,7 +80,7 @@
        * **TEST CONNECTION TO GITHUB**
    ```
    ssh -T git@github.com //IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES
-```
+   ```
 
 * ***When you git clone, git fetch, git pull, or git push to a remote repository using HTTPS URLs on the command line, you'll be asked for your GitHub username and password.***
 
@@ -94,10 +94,10 @@
 
 5-2 
 ### **CONNECTING OVER SSH** ###
-//***When you set up SSH, you'll generate an SSH key and add it to the ssh-agent and then add the key to your GitHub account. Adding the SSH key to the ssh-agent ensures that your SSH key has an extra layer of security through the use of a passphrase.
+***When you set up SSH, you'll generate an SSH key and add it to the ssh-agent and then add the key to your GitHub account. Adding the SSH key to the ssh-agent ensures that your SSH key has an extra layer of security through the use of a passphrase.***
 
 
-//***NOTICE!  SAML single sign-on (SSO) cannot be accessed with SSH. To access repositories in organizations that use SAML SSO, use an authorized personal access token with HTTPS. 
+***NOTICE!  SAML single sign-on (SSO) cannot be accessed with SSH. To access repositories in organizations that use SAML SSO, use an authorized personal access token with HTTPS.*** 
 
-//***IF TOU CLONE OVER SSH, YOU MUST GENERATE SSH KEYS ON EACH COMPUTER YOU USE TO PUSH OR PULL FROM GITHUB 
-//***If you clone GitHub repositories using SSH, then you authenticate using SSH keys instead of a username and password  
+***IF TOU CLONE OVER SSH, YOU MUST GENERATE SSH KEYS ON EACH COMPUTER YOU USE TO PUSH OR PULL FROM GITHUB***
+***If you clone GitHub repositories using SSH, then you authenticate using SSH keys instead of a username and password*** 
