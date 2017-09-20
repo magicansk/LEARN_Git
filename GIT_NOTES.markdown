@@ -198,3 +198,54 @@ provide shell access.
        * **["Error: Permission denied (publickey)" resulting contain your username](https://help.github.com/articles/error-permission-denied-publickey/)**
       
       
+      
+      
+1-3 **FOR GIT ALIAS EDIT ~/.gitconfig file** 
+
+  ```
+   [alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch -v
+    rt = reset --hard
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    amend = commit --amend
+    who = shortlog -n -s --no-merges
+    g = grep -n --color -E
+    cp = cherry-pick -x
+    nb = checkout -b
+
+    # 'git add -u' handles deleted files, but not new files
+    # 'git add .' handles any current and new files, but not deleted
+    # 'git addall' now handles all changes
+    addall = !sh -c 'git add . && git add -u'
+
+    # Handy shortcuts for rebasing
+    rc = rebase --continue
+    rs = rebase --skip
+    ra = rebase --abort
+   ```
+1-3-2 **FOR BASH edit ~/.bashrc file**  
+
+```
+function git_branch {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
+  echo "("${ref#refs/heads/}") ";
+}
+
+function git_since_last_commit {
+  now=`date +%s`;
+  last_commit=$(git log --pretty=format:%at -1 2> /dev/null) || return;
+  seconds_since_last_commit=$((now-last_commit));
+  minutes_since_last_commit=$((seconds_since_last_commit/60));
+  hours_since_last_commit=$((minutes_since_last_commit/60));
+  minutes_since_last_commit=$((minutes_since_last_commit%60));
+
+  echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
+}
+
+PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ "
+```
