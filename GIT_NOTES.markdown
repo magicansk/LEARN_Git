@@ -127,9 +127,9 @@
    eva1 "$(ssh-agent -s)"
    Agent pid 59566
    
-   [Eval command](https://www.tutorialspoint.com/unix_commands/eval.htm) comes in handy when you have a unix or linux command stored in a variable and you want to execute that command stored in the string. The eval command first evaluates the argument and then runs the command stored in the argument.
    -s options for Generate Bourne shell commands on stdout. 
    ```
-   * **Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.**
-   `ssh-add ~/.ssh/id_rsa`
+   [Eval command](https://www.tutorialspoint.com/unix_commands/eval.htm) comes in handy when you have a unix or linux command stored in a variable and you want to execute that command stored in the string. The eval command first evaluates the argument and then runs the command stored in the argument.
+   * **Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.**  
+   `ssh-add ~/.ssh/id_rsa`  
    *　**[Adding a new SSH keyto your Github Account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux)**
