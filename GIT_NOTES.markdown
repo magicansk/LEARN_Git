@@ -161,26 +161,30 @@
      ```   
      * ***YOU MAY SEE THESE WARNING***
      ```
-   The authenticity of host 'github.com (192.30.252.1)' can't be established.
-RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to continue connecting (yes/no)?
-
-The authenticity of host 'github.com (192.30.252.1)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-Are you sure you want to continue connecting (yes/no)?
+      The authenticity of host 'github.com (192.30.252.1)' can't be established.
+      RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+      Are you sure you want to continue connecting (yes/no)?
+    
+      The authenticity of host 'github.com (192.30.252.1)' can't be established.
+      RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+      Are you sure you want to continue connecting (yes/no)?
      ```
    * ***Note: The example above lists the GitHub IP address as 192.30.252.1. When pinging GitHub, you may see a range of [IP addresses](https://help.github.com/articles/github-s-ip-addresses/)***  
+     
    * **Verify that the fingerprint in the message you see matches one of the messages in step 2, then type yes**
    ```
    Hi username! You've successfully authenticated, but GitHub does not
-provide shell access.
-   ```  
-      * **ERROR MESSAGES** 
-      ``` Agent admitted failure to sign using the key.
-debug1: No more authentication methods to try.
-Permission denied (publickey).
-      ```  
-          * **["Error: Agent admitted failure to sign" for certain Linux Distribution](https://help.github.com/articles/error-agent-admitted-failure-to-sign/)**
-          * **["Error: Permission denied (publickey)" resulting contain your username](https://help.github.com/articles/error-permission-denied-publickey/)**
+provide shell access.  
+  ```  
+ * **ERROR MESSAGES**   
+      
+      ``` 
+        Agent admitted failure to sign using the key.
+        debug1: No more authentication methods to try.
+        Permission denied (publickey).
+      ```   
+      
+      * **["Error: Agent admitted failure to sign" for certain Linux Distribution](https://help.github.com/articles/error-agent-admitted-failure-to-sign/)**
+       * **["Error: Permission denied (publickey)" resulting contain your username](https://help.github.com/articles/error-permission-denied-publickey/)**
       
       
