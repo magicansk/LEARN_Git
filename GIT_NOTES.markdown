@@ -12,6 +12,7 @@
 `sudo apt-get install gitg`  
 OR  
 `sudo apt-get install gitk`  
+
 2. 
 >* ***NOTICE! Git username for associate commits with an identity. not the same as github username.***
 >
