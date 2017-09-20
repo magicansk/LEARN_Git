@@ -1,9 +1,15 @@
 # GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS) #
 
-## CH1 ##
+## CH1. SET UP A GIT ##
 
 1. `sudo apt-get install git-core` 
-
+1-1 **FOR CORE EDITOR**  
+`git config --global core.editor vi`  
+`git config --global core.editor gedit`
+1-2 **FOR GUI**  
+`sudo apt-get install gitg`
+OR
+`sudo apt-get install gitk`
 2. 
 >* ***NOTICE! Git username for associate commits with an identity. not the same as github username.***
 >
