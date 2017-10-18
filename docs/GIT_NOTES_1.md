@@ -79,7 +79,7 @@ OR
 #### **CONNECTING OVER HTTPS** ####
 * ***If you clone with https, you can cache your github password in git using a credential helper***  
      * **Turn on credential helper git will save your password in memory cache 15 min default.**
-       ```
+       ```bash
        git config --global credential.helper cache #SET GIT TO USE THE CREDENTIAL MEMORY CAHCE
        git config --global credential.helper 'cache --timeout=3600' #CHANGE THE DEFAULT PASSWORD CACHE TIMEOUT (AFTER 1 HOUR IN SECONDS)
        git config --global credential.helper #FOR CONFIRM
@@ -97,15 +97,16 @@ OR
    
        * **ENABLING SSH CONNECTIONS OVER HTTPS**
          * ***If you able ssh into git@ssh.github.com over port 443, override your ssh setting to force any connection to github through the server and port***
-         *  **SET SSH CONFIG EDIT FILE  ~/.ssh/config**
-            ```
+         *  **SET SSH CONFIG EDIT FILE  ~/.ssh/config**  
+         
+            ```bash
               Host github.com
               Hostname ssh.github.com
               Port 443 
             ```
        
        * **TEST CONNECTION TO GITHUB**
-   ```
+   ```bash
    ssh -T git@github.com #IF YES, YOU SHOULD SEE ABOVE THE HI USERNAME MESSAGES
    ```
 
@@ -145,7 +146,7 @@ OR
 >      * **You can secure your SSH keys and configure an authentication agent so that you won't have to reenter your passphrase every time you use your SSH keys.**
 * #### **GENERATING A NEW SSH KEY** #### 
   * **OPEN TERMINAL**
-  *  ```
+  *  ```bash 
      ssh-keygen -t rsa -b 4096 -C "your_email@example.com" #WITH YOU GITHUB EMAIL
      -t (Specifies the type of key to create)
      -b (The desired length of the primes may be specified) #SEE MORE IN man page ssh-keygen(1)
@@ -156,7 +157,7 @@ OR
   * **When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.**    
     `Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]`
   * **At the prompt, type a secure passphrase**  
-    ```
+    ```bash
     Enter passphrase (empty for no passphrase): [Type a passphrase]
     Enter same passphrase again: [Type passphrase again]
     ```
@@ -164,7 +165,7 @@ OR
 * #### ADDING YOUR SSH KEY TO THE SSH-AGENT ####  
 >* **Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.**
    * **START THE SSH-AGENT IN THE BACKGROUND**
-   ```
+   ```bash
    eva1 "$(ssh-agent -s)"
    Agent pid 59566
    
@@ -182,12 +183,12 @@ OR
 >    
    * ***When you test your connection, you'll need to authenticate this action using your password, which is the SSH key passphrase you created earlier.***
      
-   * ```
+   * ```bash
      ssh -T git@github.com #Attempts to ssh to github 
      # -T for  Disable pseudo-terminal allocation.
      ```   
      * ***YOU MAY SEE THESE WARNING***
-     ```
+     ```bash
       The authenticity of host 'github.com (192.30.252.1)' can't be established.
       RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
       Are you sure you want to continue (yes/no)?
@@ -199,13 +200,13 @@ OR
    * ***Note: The example above lists the GitHub IP address as 192.30.252.1. When pinging GitHub, you may see a range of [IP addresses](https://help.github.com/articles/github-s-ip-addresses/)***  
      
    * **Verify that the fingerprint in the message you see matches one of the messages in step 2, then type yes**
-   ```
+   ```bash
    Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.  
   ```  
  * **ERROR MESSAGES**   
       
-      ``` 
+      ```bash
         Agent admitted failure to sign using the key.
         debug1: No more authentication methods to try.
         Permission denied (publickey).
