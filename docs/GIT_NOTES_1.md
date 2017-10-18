@@ -11,7 +11,7 @@
 [SETTING COMMIT EMAIL ADDRESS IN GIT](#setting-commit-email-address-in-git)  
 [AUTHENTICATION WITH GITHUB FROM GIT](#authentication-with-github-from-git)  
 [CONNECTING OVER HTTPS](#connecting-over-https)  
-[CONNECTING OVER SSH](#connecting-over-ssh)
+[CONNECTING OVER SSH](#connecting-over-ssh)  
 [References](#references)
 
 
