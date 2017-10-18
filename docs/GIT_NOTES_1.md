@@ -1,14 +1,31 @@
-# GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS) #
+# GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS) #  
+
+## Table of Contents 
+[CH1 SET UP A GIT](#ch1-set-up-a-git)  
+[FOR CORE EDITOR](#for-core-editor)  
+[FOR GUI](#for-gui)  
+[FOR GIT ALIAS EDIT](#for-git-alias-edit)  
+[FOR BASH EDIT](#for-bash-edit)  
+[SETTING GIT USERNAME FOR EVERY REPOSITORY](#setting-git-username-for-every-repository)  
+[SETTING GIT USERNAME FOR SINGLE REPOSITORY](#setting-git-username-for-single-repository)  
+[SETTING COMMIT EMAIL ADDRESS IN GIT](#setting-commit-email-address-in-git)  
+[AUTHENTICATION WITH GITHUB FROM GIT](#authentication-with-github-from-git)  
+[CONNECTING OVER HTTPS](#connecting-over-https)  
+[CONNECTING OVER SSH](#connecting-over-ssh)
+[References](#references)
+
 
 ## CH1. SET UP A GIT ##
 
 1. `sudo apt-get install git-core`  
 
-1-1 **FOR CORE EDITOR**  
+1-1. 
+### **FOR CORE EDITOR** ###
 `git config --global core.editor vi`  
 `git config --global core.editor gedit` 
 
-1-2 **FOR GUI**    
+1-2. 
+### **FOR GUI** ###
 `sudo apt-get install gitg`  
 OR  
 `sudo apt-get install gitk`  
@@ -59,7 +76,7 @@ OR
 >* ***When you connect to a github repository from git, you'll need to authenticate with github using either https or ssh.***
 
 5-1. 
-#### **CONNECTING OVER HTTPS (RECOMMENDED)** ####
+#### **CONNECTING OVER HTTPS** ####
 * ***If you clone with https, you can cache your github password in git using a credential helper***  
      * **Turn on credential helper git will save your password in memory cache 15 min default.**
        ```
@@ -173,7 +190,7 @@ OR
      ```
       The authenticity of host 'github.com (192.30.252.1)' can't be established.
       RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-      Are you sure you want to continue connecting (yes/no)?
+      Are you sure you want to continue (yes/no)?
     
       The authenticity of host 'github.com (192.30.252.1)' can't be established.
       RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
@@ -200,9 +217,11 @@ provide shell access.
       
       
       
-1-3 **FOR GIT ALIAS EDIT ~/.gitconfig file** 
+1-3 
+### **FOR GIT ALIAS EDIT**  ###
 
-  ```
+  ```bash
+   ~/.gitconfig file
    [alias]
     co = checkout
     ci = commit
@@ -228,9 +247,11 @@ provide shell access.
     rs = rebase --skip
     ra = rebase --abort
    ```
-1-3-2 **FOR BASH edit ~/.bashrc file**  
+1-3-2
+### **FOR BASH edit** ###
 
-```
+```bash
+ ~/.bashrc file
 function git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
   echo "("${ref#refs/heads/}") ";
