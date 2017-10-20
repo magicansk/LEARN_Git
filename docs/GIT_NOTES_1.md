@@ -1,6 +1,6 @@
-# GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS) #  
-
-## Table of Contents 
+ GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS)  
+# Chapter 1. Setting up and Configure your Git Authenticating #  
+## Table of Contents ## 
 [CH1 SET UP A GIT](#ch1-set-up-a-git)  
 [FOR CORE EDITOR](#for-core-editor)  
 [FOR GUI](#for-gui)  
