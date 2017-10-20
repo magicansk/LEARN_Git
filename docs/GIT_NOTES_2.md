@@ -7,7 +7,8 @@
 
 ### Syncing a Fork ###  
 
-1. 
+1-0.  
+
 Check and configuring a remote upstream repository in Git with the original repository for sync changes you make in fork.  
 
 
@@ -34,7 +35,8 @@ $ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.
  upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push) 
 ```  
 
-2. 
+2-0.  
+
 Sync a fork  
 
 2-1.  
