@@ -3,7 +3,12 @@
 # Chapter 2. Collaborating with issues and PR(pull requests) #  
 
 ## Table of Contents ##  
+[Return to Home](#return-to-home)  
+[Syncing a Fork](#syncing-a-fork)  
 
+### Return to Home
+Return to TOC in home pages
+[Return Home](https://magicansk.github.io/LEARN_Git/TOC)
 
 ### Syncing a Fork ###  
 

@@ -1,6 +1,7 @@
  GIT IS AN OPEN SOURCE VERSION CONTROL SYSTEM(VCS)  
 # Chapter 1. Setting up and Configure your Git Authenticating #  
 ## Table of Contents ## 
+[Return to Home](#return-to-home)  
 [CH1 SET UP A GIT](#ch1-set-up-a-git)  
 [FOR CORE EDITOR](#for-core-editor)  
 [FOR GUI](#for-gui)  
@@ -14,8 +15,12 @@
 [CONNECTING OVER SSH](#connecting-over-ssh)  
 [References](#references)
 
+## Return to Home
+Return to TOC in home pages.
+[Return Home](https://magicansk.github.io/LEARN_Git/TOC)  
 
 ## CH1. SET UP A GIT ##
+
 
 1. `sudo apt-get install git-core`  
 
