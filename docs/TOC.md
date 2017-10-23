@@ -1,7 +1,6 @@
 # Welcome to Git Learn   
 
-[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  
-
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  [![Join the chat at https://t.co/MGy1Tla9VO](https://badges.gitter.im/trailofbits/algo.svg)](https://t.co/MGy1Tla9VO)  
 This is a git learn TOC for people who are new to contributing to open source. 
 
 ## Table of Contents  
