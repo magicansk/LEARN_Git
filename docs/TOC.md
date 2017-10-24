@@ -1,6 +1,6 @@
 # Welcome to Git Learn   
 
-[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  [![Join the chat at https://t.co/MGy1Tla9VO](https://badges.gitter.im/trailofbits/algo.svg)](https://t.co/MGy1Tla9VO)  
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  [![Join the chat at https://t.co/MGy1Tla9VO](https://badges.gitter.im/trailofbits/algo.svg)](https://t.co/MGy1Tla9VO) [![Dependency Status](https://gemnasium.com/badges/github.com/magicansk/LEARN_Git.svg)](https://gemnasium.com/github.com/magicansk/LEARN_Git)  
 This is a git learn TOC for people who are new to contributing to open source. 
 
 ## Table of Contents  
