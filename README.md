@@ -7,7 +7,7 @@ This is a git learn TOC for people who are new to contributing to open source.
 - [GIT_NOTES_1](#git-notes-1)
 - [GIT_NOTES_2](#git-notes-2)  
 ### GIT_NOTES_1  
-- [GIT NOTES 1](https://magicansk.github.io/LEARN_Git/GIT_NOTES_1)  
+- [GIT NOTES 1](https://github.com/magicansk/LEARN_Git/blob/master/docs/GIT_NOTES_1.md)  
 ### GIT_NOTES_2  
 - [GIT NOTES 2](https://magicansk.github.io/LEARN_Git/GIT_NOTES_2)  
 
